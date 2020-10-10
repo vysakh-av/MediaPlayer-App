@@ -1,0 +1,6 @@
+https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4
+https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8
+https://www.freedesktop.org/software/gstreamer-sdk/data/media/sintel_trailer-480p.webm
+https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8
+https://1eobz5yd.skychnl.net/1EOBZ5YD/6YDPSCHKRKWS/hd/hls/6YDPSCHKRKWS_clear.m3u8
+https://bitmovin-a.akamaihd.net/content/playhouse-vr/mpds/105560.mpd
