@@ -63,19 +63,6 @@ In manual mode, player app supports the following options:
 3. Compile: cmake .. && make
 4. Run it: ./play
 
-## How to use application
-- First user need to enter a playback streaming URL, its could be either http::// playback URL or local file file://
-```
-http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_surround.avi
-file:://<path>/big_buck_bunny_1080p_surround.avi
-```
- Note: In case of file:// , the media should download in to the local machine
-
-- To start the playback , type `play` in console
-- To pause the playback, type `pause` in console
-- To stop the playback, type `stop` in console
-- To quit from app, type `quit` in console
-
 ## Project Requirement
 ### Loops, Functions, I/O
 - Used different controle structures in the entire application. In main.cpp, we could see different control structures for example.
