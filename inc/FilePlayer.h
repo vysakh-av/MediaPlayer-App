@@ -15,22 +15,21 @@
 #include <iostream>
 #include <memory>
 
-class FilePlayer : public Player
-{
-public:
-  virtual RETCODE init(int, char**);
-  virtual RETCODE load(const string&);
-  virtual RETCODE play();
-  virtual RETCODE pause();
-  virtual RETCODE stop();
-  static FilePlayer* getPlayerInstance();
+class FilePlayer : public Player {
+  public:
+    virtual RETCODE init(int, char **);
+    virtual RETCODE load(const string &);
+    virtual RETCODE play();
+    virtual RETCODE pause();
+    virtual RETCODE stop();
+    static FilePlayer *getPlayerInstance();
 
-private:
-  FilePlayer();
-  ~FilePlayer();
-  GstElement* m_pPlaybin;
-  bool m_isIntialised;
-  string m_sUrl;
-  static gboolean handleGstMsg(GstBus* bus, GstMessage* msg);
+  private:
+    FilePlayer();
+    ~FilePlayer();
+    GstElement *m_pPlaybin;
+    bool m_isIntialised;
+    string m_sUrl;
+    static gboolean handleGstMsg(GstBus *bus, GstMessage *msg);
 };
 #endif /* _FILEPLAYER_H */

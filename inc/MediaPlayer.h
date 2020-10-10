@@ -12,30 +12,29 @@
 
 // Player type
 typedef enum {
-  HTTP_PLAYBACK,
-  FILE_PLAYBACK,
-  INVALID_TYPE,
+    HTTP_PLAYBACK,
+    FILE_PLAYBACK,
+    INVALID_TYPE,
 } PLAYBACK_TYPE;
 using namespace std;
 
-class MediaPlayer
-{
-public:
-  MediaPlayer();
-  ~MediaPlayer();
-  MediaPlayer(const MediaPlayer& src) = default;
-  MediaPlayer& operator=(const MediaPlayer& src) = default;
-  MediaPlayer(MediaPlayer&& src) = default;
-  MediaPlayer& operator=(MediaPlayer&& src) = default;
-  RETCODE load(const std::string& uri);
-  RETCODE play();
-  RETCODE pause();
-  RETCODE stop();
+class MediaPlayer {
+  public:
+    MediaPlayer();
+    ~MediaPlayer();
+    MediaPlayer(const MediaPlayer &src) = default;
+    MediaPlayer &operator=(const MediaPlayer &src) = default;
+    MediaPlayer(MediaPlayer &&src) = default;
+    MediaPlayer &operator=(MediaPlayer &&src) = default;
+    RETCODE load(const std::string &uri);
+    RETCODE play();
+    RETCODE pause();
+    RETCODE stop();
 
-private:
-  std::string pURI;
-  Player* player;
-  PLAYBACK_TYPE ePlayerType;
-  RETCODE createPlayer(const string& uri);
+  private:
+    std::string pURI;
+    Player *player;
+    PLAYBACK_TYPE ePlayerType;
+    RETCODE createPlayer(const string &uri);
 };
 #endif //_MEDIAPLAYER_H_.

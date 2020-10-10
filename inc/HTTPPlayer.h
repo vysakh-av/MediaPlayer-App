@@ -16,25 +16,24 @@
 #include <iostream>
 #include <memory>
 
-class HTTPPlayer : public Player
-{
-public:
-  virtual RETCODE init(int, char**);
-  virtual RETCODE load(const string&);
-  virtual RETCODE play();
-  virtual RETCODE pause();
-  virtual RETCODE stop();
-  static HTTPPlayer* getPlayerInstance();
-  void SetErrorMsg(std::string msg);
-  void SetErrorFlag(bool flag);
+class HTTPPlayer : public Player {
+  public:
+    virtual RETCODE init(int, char **);
+    virtual RETCODE load(const string &);
+    virtual RETCODE play();
+    virtual RETCODE pause();
+    virtual RETCODE stop();
+    static HTTPPlayer *getPlayerInstance();
+    void SetErrorMsg(std::string msg);
+    void SetErrorFlag(bool flag);
 
-private:
-  HTTPPlayer();
-  ~HTTPPlayer();
-  GstElement* m_pPlaybin;
-  bool m_isIntialised;
-  string m_sUrl;
-  GstBus* _bus;
-  static gboolean handleGstMsg(GstBus* bus, GstMessage* msg);
+  private:
+    HTTPPlayer();
+    ~HTTPPlayer();
+    GstElement *m_pPlaybin;
+    bool m_isIntialised;
+    string m_sUrl;
+    GstBus *_bus;
+    static gboolean handleGstMsg(GstBus *bus, GstMessage *msg);
 };
 #endif /* _HTTPPLAYER_H */
